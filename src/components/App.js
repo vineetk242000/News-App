@@ -30,7 +30,7 @@ function App(){
  async function GetFeed(e){
   e.preventDefault();
    const search=(e.target.elements.search.value);
-   const response= await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=f713c285346a4e2fb0aef2aad8691751`)
+   const response= await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${Your Api Key}`)
    data=await handleResponse(response);
    await setShowResults(data.articles);
    await setRedirect(true);
@@ -41,7 +41,7 @@ function App(){
  }
   async function getHeadlines(e){
     e.preventDefault();
-  const response= await fetch("https://newsapi.org/v2/top-headlines?country=in&apiKey=f713c285346a4e2fb0aef2aad8691751")
+  const response= await fetch(`https://newsapi.org/v2/top-headlines?country=in&apikey=${Your Api Key}`)
    data1=await handleResponse(response);
    console.log(data1);
    setShowHeadlines(data1.articles);
@@ -50,11 +50,7 @@ function App(){
   }
 
    
-
-
-
-
-  return(
+ return(
     
     <div>
     <Header redirectToHome={redirectToHome}/>
@@ -71,37 +67,8 @@ function App(){
     }  />
     </Switch>
     </div>
-   
-
-
-
-
-
-
-
-
-  );
+   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
