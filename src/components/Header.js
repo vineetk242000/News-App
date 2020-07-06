@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from 'react-router-dom';
 
 function Header(props){
-    return(
+ return(
 <div className="header">
 <h1>News App</h1>
 <ul>
@@ -11,11 +11,7 @@ function Header(props){
 <li><Link to="/search">Search</Link></li>
 </ul>
 </div>
-
-
-
-
-    )
+)
 }
 
 
